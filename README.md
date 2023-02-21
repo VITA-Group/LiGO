@@ -10,7 +10,7 @@
 [Zhangyang (Atlas) Wang](https://vita-group.github.io/)<sup>1</sup>
 [Yoon Kim](https://people.csail.mit.edu/yoonkim/)<sup>4</sup>
 
-<sup>1</sup>University of Texas at Austin, <sup>2</sup>MIT-IBM Watson Lab, <sup>3</sup>Columnbia University, <sup>4</sup>MIT
+<sup>1</sup>University of Texas at Austin, <sup>2</sup>MIT-IBM Watson Lab, <sup>3</sup>Columbia University, <sup>4</sup>MIT
 
 [Project Page](https://vita-group.github.io/LiGO) | [Paper](https://openreview.net/pdf?id=cDYRS5iZ16f)
 
