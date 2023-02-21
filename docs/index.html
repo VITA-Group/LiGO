@@ -1,0 +1,250 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+  body {
+    font-family: "Titillium Web","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+  }
+
+  h1 {
+    font-weight:300;
+  }
+
+  .disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+  }
+
+  video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  .link2 {
+    text-decoration: none;
+    display: inline;
+    margin-right: 5px;
+  }
+
+  .fakelink {
+    text-decoration: none;
+    /* cursor: pointer; */
+  }
+
+  element.style {
+    overflow: hidden;
+    display: block;
+  }
+  .pre-white-space {
+    white-space: pre;
+  }
+  .bibref {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: none;
+    font-size: 14px;
+    font-family: monospace;
+  }
+
+  img.rounded {
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  a:link,a:visited
+  {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+            15px 15px 0 0px #fff, /* The fourth layer */
+            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+            20px 20px 0 0px #fff, /* The fifth layer */
+            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+            25px 25px 0 0px #fff, /* The fifth layer */
+            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+    margin-left: 10px;
+    margin-right: 45px;
+  }
+
+
+  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+
+  .vert-cent {
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+</style>
+<script type="text/javascript" src="resources/hidebib.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+  <head>
+    <link rel="icon" type="image/png" href="resources/ucsd_logo.png">
+    <title>Learning to Grow Pretrained Models for Efficient Transformer Training</title>
+    <meta property='og:title' content='Learning to Grow Pretrained Models for Efficient Transformer Training' />
+    <meta property="og:description" content="Peihao Wang, Rameswar Panda, Lucas Torroba Hennigen, Philip Greengard, Leonid Karlinsky, Rogerio Feris, David Cox, Atlas Wang, Yoon Kim. Learning to Grow Pretrained Models for Efficient Transformer Training. In ICLR, 2023." />
+    <meta property='og:url' content='https://vita-group.github.io/LiGO/' />
+  </head>
+  <body>
+        <br>
+        <center><span style="font-size:40px;font-weight:bold;color:#182B49">Learning to Grow Pretrained Models for <br/> Efficient Transformer Training</span></center>
+
+        <table align=center width=900px>
+          <tr>
+            <td align=center width=180px>
+            <center><span style="font-size:20px"><a href="https://peihaowang.github.io/" target="_blank">Peihao Wang</a><sup>1</sup></span></center></td>
+            <td align=center width=180px>
+            <center><span style="font-size:20px"><a href="https://rpand002.github.io/" target="_blank">Rameswar Panda</a><sup>2</sup></span></center></td>
+            <td align=center width=280px>
+              <center><span style="font-size:20px"><a href="https://ltorroba.github.io/" target="_blank">Lucas Torroba Hennigen</a><sup>4</sup></span></center></td>
+            <td align=center width=180px>
+                <center><span style="font-size:20px"><a href="http://www.columbia.edu/~pg2118/" target="_blank">Philip Greengard</a><sup>3</sup></span></center></td>
+          <tr/>
+         </table>
+
+         <table align=center width=900px>
+          <tr>
+            <td align=center width=280px>
+                <center><span style="font-size:20px"><a href="https://scholar.google.com/citations?user=WbO7tjYAAAAJ&hl=en" target="_blank">Leonid Karlinsky</a><sup>2</sup></span></center></td>
+            <td align=center width=280px>
+            <center><span style="font-size:20px"><a href="http://rogerioferis.com/" target="_blank">Rogerio Feris</a><sup>2</sup></span></center></td>
+            <td align=center width=180px>
+                <center><span style="font-size:20px"><a href="https://mitibmwatsonailab.mit.edu/people/david-cox/" target="_blank">David Cox</a><sup>2</sup></span></center></td>
+            <td align=center width=280px>
+            <center><span style="font-size:20px"><a href="https://spark.adobe.com/page/CAdrFMJ9QeI2y/" target="_blank">Atlas Wang</a><sup>1</sup></span></center></td>
+            <td align=center width=180px>
+            <center><span style="font-size:20px"><a href="https://people.csail.mit.edu/yoonkim/" target="_blank">Yoon Kim</a><sup>4</sup></span></center></td>
+          <tr/>
+        </table>
+
+        <table align=center width=900px>
+          <tr>
+            <td align=center width=250px><center><sup>1 </sup><span style="font-size:18px">University of Texas at Austin</span></center></td>
+            <td align=center width=250px><center><sup>2 </sup><span style="font-size:18px">MIT-IBM Watson AI Lab</span></center></td>
+            <td align=center width=150px><center><sup>3 </sup><span style="font-size:18px">Columbia University</span></center></td>
+            <td align=center width=150px><center><sup>4 </sup><span style="font-size:18px">MIT</span></center></td>
+          <tr/>
+        </table> 
+        <table align=center width=400px>
+          <tr>
+            <td align=center width=150px>
+            <center><span style="font-size:24px"><a href="http://iccv2021.thecvf.com/" target="_blank">ICLR 2023</a></span></center></td>
+          <tr/>
+        </table>
+        <table align=center width=200px>
+            <tr><td width=200px>
+              <center><a href="images/pipeline.png"><img src = "images/pipeline.png" width="900" height="300"></img></a><br></center>
+            </td></tr>
+        </table>
+
+        <center id="abstract"><h1>Abstract</h1></center>
+        Scaling transformers has led to significant breakthroughs in many domains, leading to a paradigm in which larger versions of existing models are trained and released on a periodic basis. New instances of such models are typically trained completely from scratch, despite the fact that they are often just scaled-up versions of their smaller counterparts. How can we use the implicit knowledge in the parameters of smaller, extant models to enable faster training of newer, larger models? This paper describes an approach for accelerating transformer training by {learning to grow} pretrained transformers, where we learn to linearly map  the parameters of the smaller model to initialize the larger model. For tractable learning, we factorize the linear transformation as a composition of  (linear) width- and  depth-growth operators, and further employ a  Kronecker factorization of these growth operators to encode architectural knowledge. Extensive experiments across both language and vision transformers demonstrate that our learned Linear Growth Operator (LiGO)  can save up to 50% computational cost of training from scratch, while also consistently outperforming strong baselines that also reuse smaller pretrained models to initialize larger models.
+        <br><hr>
+
+        <center id="results0"><h1>Qualitative Results</h1></center>
+        <table align=center width=500px>
+            <tr><td width=500px>
+              <center><a href="images/performance.png"><img src = "images/performance.png" width="900" height="500"></img></a><br></center>
+            </td></tr>
+          </table>
+          <caption align="center"><center>Qualitative examples showing that <strong>LiGO</strong> can accelerate BERT training time by ~40% with ~45% FLOPs saving.</center></caption>
+        <br>
+        <hr>
+
+        
+        <center id="sourceCode"><h1>Paper & Code</h1></center>
+
+
+        <table align=center width=900px>
+            <tr></tr>
+          <tr>
+            <td >
+        <a href="index.html"><img class="paperpreview" src="images/pipeline.png" width="250px"/></a>
+          </td>
+          <td></td>
+          <td width=700px > <span style="font-size:20px">
+            Peihao Wang, Rameswar Panda, Lucas Torroba Hennigen, Philip Greengard, Leonid Karlinsky, Rogerio Feris, David Cox, Atlas Wang, Yoon Kim<br/>
+              <a href="">
+                  Learning to Grow Pretrained Models for Efficient Transformer Training</a> <br/> <i>International Conference on Learning Representations (ICLR)</i>, 2023 <br/>
+            [<a href="#">PDF</a>]
+            [<a href="#">Code</a>]
+
+
+</span>
+        </td>
+        </tr>
+
+      </table>
+
+      <br>
+      <hr>
+
+      <br/>
+
+    <br><br>
+<script xml:space="preserve" language="JavaScript">
+hideallbibs();
+</script>
+</body>
+</html>
