@@ -1,6 +1,5 @@
 # Learning to Grow Pretrained Models for Efficient Transformer Training
 
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 The official implementation of ICLR 2023 paper [Learning to Grow Pretrained Models for Efficient Transformer Training](https://arxiv.org/abs/2303.00980).
@@ -16,8 +15,6 @@ The official implementation of ICLR 2023 paper [Learning to Grow Pretrained Mode
 [Yoon Kim](https://people.csail.mit.edu/yoonkim/)<sup>4</sup>
 
 <sup>1</sup>University of Texas at Austin, <sup>2</sup>MIT-IBM Watson Lab, <sup>3</sup>Columbia University, <sup>4</sup>MIT
-
-This repository is based on the project [Vokenization](https://github.com/airsplay/vokenization#vokenization-vokenization).
 
 [Project Page](https://vita-group.github.io/LiGO) | [Paper](https://arxiv.org/abs/2303.00980)
 
@@ -140,6 +137,7 @@ python vlm/run_lm_distributed.py --config configs/roberta_wiki.txt --config_name
 
 ## Citation
 
+This repository is based on the project [Vokenization](https://github.com/airsplay/vokenization#vokenization-vokenization).
 If you find this work or our work helpful for your own research, please cite our paper.
 
 ```
