@@ -1,9 +1,12 @@
 # Learning to Grow Pretrained Models for Efficient Transformer Training
 
+<<<<<<< HEAD
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 The official implementation of ICLR 2023 paper [Learning to Grow Pretrained Models for Efficient Transformer Training](https://arxiv.org/abs/2303.00980).
 
+=======
+>>>>>>> c67a381834c11b5e539dcae8639f2ae46e8386af
 [Peihao Wang](https://peihaowang.github.io/)<sup>1</sup>,
 [Rameswar Panda](https://rpand002.github.io/)<sup>2</sup>,
 [Lucas Torroba Hennigen](https://ltorroba.github.io/)<sup>4</sup>,
@@ -16,6 +19,7 @@ The official implementation of ICLR 2023 paper [Learning to Grow Pretrained Mode
 
 <sup>1</sup>University of Texas at Austin, <sup>2</sup>MIT-IBM Watson Lab, <sup>3</sup>Columbia University, <sup>4</sup>MIT
 
+<<<<<<< HEAD
 [Project Page](https://vita-group.github.io/LiGO) | [Paper](https://arxiv.org/abs/2303.00980)
 
 ## Getting Started
@@ -149,3 +153,8 @@ year={2023},
 url={https://openreview.net/forum?id=cDYRS5iZ16f},
 }
 ```
+=======
+[Project Page](https://vita-group.github.io/LiGO) | [Paper](https://openreview.net/pdf?id=cDYRS5iZ16f)
+
+Code coming soon...
+>>>>>>> c67a381834c11b5e539dcae8639f2ae46e8386af
