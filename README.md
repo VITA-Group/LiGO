@@ -11,7 +11,7 @@ The official implementation of ICLR 2023 paper [Learning to Grow Pretrained Mode
 [Leonid Karlinsky](https://scholar.google.com/citations?user=WbO7tjYAAAAJ&hl=en)<sup>2</sup>,
 [Rogerio Feris](http://rogerioferis.com/)<sup>2</sup>,
 [David Cox](https://mitibmwatsonailab.mit.edu/people/david-cox/)<sup>2</sup>,
-[Zhangyang (Atlas) Wang](https://vita-group.github.io/)<sup>1</sup>
+[Zhangyang (Atlas) Wang](https://vita-group.github.io/)<sup>1</sup>,
 [Yoon Kim](https://people.csail.mit.edu/yoonkim/)<sup>4</sup>
 
 <sup>1</sup>University of Texas at Austin, <sup>2</sup>MIT-IBM Watson Lab, <sup>3</sup>Columbia University, <sup>4</sup>MIT
@@ -22,7 +22,7 @@ The official implementation of ICLR 2023 paper [Learning to Grow Pretrained Mode
 
 ### Dependency
 
-To run our code, the following Python libraries which are required:
+To run our code, the following libraries which are required:
 
 ```
 torch
