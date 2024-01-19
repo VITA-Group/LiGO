@@ -16,7 +16,7 @@ The official implementation of ICLR 2023 paper [Learning to Grow Pretrained Mode
 
 <sup>1</sup>University of Texas at Austin, <sup>2</sup>MIT-IBM Watson Lab, <sup>3</sup>Columbia University, <sup>4</sup>MIT
 
-[Project Page](https://vita-group.github.io/LiGO) | [Paper](https://arxiv.org/abs/2303.00980)
+![](./docs/images/pipeline.png)
 
 ## Getting Started
 
