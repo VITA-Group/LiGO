@@ -103,7 +103,7 @@ First train a LiGO operator using the following command:
 python run_grow_distributed.py --config configs/bert_wiki.txt --config_name configs/bert-12L-768H.json --output_dir <path_to_save_LiGO> --tune_width --tune_depth --source_model_path <path_to_small_model> --fuse_init_scheme stackbert_noisy rand --max_steps 100 --logging_steps 100 --ckpt_steps 100 --should_continue
 ```
 
-Then use pre-train LiGO operator to grow the model:
+Then use pre-trained LiGO operator to grow the model:
 
 ```
 python run_lm_distributed.py --config configs/bert_wiki.txt --config_name configs/bert-12L-768H.json --output_dir <output_path> --grow_scheme ligo --source_model_path <path_to_small_model>  --pretrained_ligo_path <path_to_save_LiGO> --fuse_init_scheme stackbert_noisy rand --learning_rate 2e-4 --warmup_steps 0 --should_continue
@@ -128,10 +128,10 @@ Note that the argument `--gradient_accumulation_steps 4` is necessary to gaurant
 ### Training RoBERTa with LiGO
 
 ```
+# Train LiGO
 python run_grow_distributed.py --config configs/roberta_wiki.txt --config_name configs/roberta-12L-768H.json --per_gpu_train_batch_size 64 --gradient_accumulation_steps 4 --learning_rate 2e-4 --output_dir <path_to_save_LiGO> --tune_width --tune_depth --source_model_path <path_to_small_model> --fuse_init_scheme stackbert_noisy rand --max_steps 100 --logging_steps 100 --ckpt_steps 100 --should_continue
-```
 
-```
+# Apply pre-trained LiGO operator to grow the model
 python vlm/run_lm_distributed.py --config configs/roberta_wiki.txt --config_name configs/roberta-12L-768H.json --per_gpu_train_batch_size 64 --gradient_accumulation_steps 4 --output_dir <output_dir> --grow_scheme ligo --source_model_path <path_to_small_model> --pretrained_ligo_path <path_to_save_LiGO> --fuse_init_scheme stackbert_noisy rand --learning_rate 2e-4 --warmup_steps 10000 --should_continue
 ```
 
