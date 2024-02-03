@@ -1,12 +1,9 @@
 # Learning to Grow Pretrained Models for Efficient Transformer Training
 
-<<<<<<< HEAD
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 The official implementation of ICLR 2023 paper [Learning to Grow Pretrained Models for Efficient Transformer Training](https://arxiv.org/abs/2303.00980).
 
-=======
->>>>>>> c67a381834c11b5e539dcae8639f2ae46e8386af
 [Peihao Wang](https://peihaowang.github.io/)<sup>1</sup>,
 [Rameswar Panda](https://rpand002.github.io/)<sup>2</sup>,
 [Lucas Torroba Hennigen](https://ltorroba.github.io/)<sup>4</sup>,
@@ -14,19 +11,18 @@ The official implementation of ICLR 2023 paper [Learning to Grow Pretrained Mode
 [Leonid Karlinsky](https://scholar.google.com/citations?user=WbO7tjYAAAAJ&hl=en)<sup>2</sup>,
 [Rogerio Feris](http://rogerioferis.com/)<sup>2</sup>,
 [David Cox](https://mitibmwatsonailab.mit.edu/people/david-cox/)<sup>2</sup>,
-[Zhangyang (Atlas) Wang](https://vita-group.github.io/)<sup>1</sup>
+[Zhangyang (Atlas) Wang](https://vita-group.github.io/)<sup>1</sup>,
 [Yoon Kim](https://people.csail.mit.edu/yoonkim/)<sup>4</sup>
 
 <sup>1</sup>University of Texas at Austin, <sup>2</sup>MIT-IBM Watson Lab, <sup>3</sup>Columbia University, <sup>4</sup>MIT
 
-<<<<<<< HEAD
-[Project Page](https://vita-group.github.io/LiGO) | [Paper](https://arxiv.org/abs/2303.00980)
+![](./docs/images/pipeline.png)
 
 ## Getting Started
 
 ### Dependency
 
-To run our code, the following Python libraries which are required:
+To run our code, the following libraries which are required:
 
 ```
 torch
@@ -107,7 +103,7 @@ First train a LiGO operator using the following command:
 python run_grow_distributed.py --config configs/bert_wiki.txt --config_name configs/bert-12L-768H.json --output_dir <path_to_save_LiGO> --tune_width --tune_depth --source_model_path <path_to_small_model> --fuse_init_scheme stackbert_noisy rand --max_steps 100 --logging_steps 100 --ckpt_steps 100 --should_continue
 ```
 
-Then use pre-train LiGO operator to grow the model:
+Then use pre-trained LiGO operator to grow the model:
 
 ```
 python run_lm_distributed.py --config configs/bert_wiki.txt --config_name configs/bert-12L-768H.json --output_dir <output_path> --grow_scheme ligo --source_model_path <path_to_small_model>  --pretrained_ligo_path <path_to_save_LiGO> --fuse_init_scheme stackbert_noisy rand --learning_rate 2e-4 --warmup_steps 0 --should_continue
@@ -132,10 +128,10 @@ Note that the argument `--gradient_accumulation_steps 4` is necessary to gaurant
 ### Training RoBERTa with LiGO
 
 ```
+# Train LiGO
 python run_grow_distributed.py --config configs/roberta_wiki.txt --config_name configs/roberta-12L-768H.json --per_gpu_train_batch_size 64 --gradient_accumulation_steps 4 --learning_rate 2e-4 --output_dir <path_to_save_LiGO> --tune_width --tune_depth --source_model_path <path_to_small_model> --fuse_init_scheme stackbert_noisy rand --max_steps 100 --logging_steps 100 --ckpt_steps 100 --should_continue
-```
 
-```
+# Apply pre-trained LiGO operator to grow the model
 python vlm/run_lm_distributed.py --config configs/roberta_wiki.txt --config_name configs/roberta-12L-768H.json --per_gpu_train_batch_size 64 --gradient_accumulation_steps 4 --output_dir <output_dir> --grow_scheme ligo --source_model_path <path_to_small_model> --pretrained_ligo_path <path_to_save_LiGO> --fuse_init_scheme stackbert_noisy rand --learning_rate 2e-4 --warmup_steps 10000 --should_continue
 ```
 
@@ -153,8 +149,4 @@ year={2023},
 url={https://openreview.net/forum?id=cDYRS5iZ16f},
 }
 ```
-=======
-[Project Page](https://vita-group.github.io/LiGO) | [Paper](https://openreview.net/pdf?id=cDYRS5iZ16f)
 
-Code coming soon...
->>>>>>> c67a381834c11b5e539dcae8639f2ae46e8386af
