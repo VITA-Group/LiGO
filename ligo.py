@@ -618,7 +618,7 @@ def initialize_model_with_ligo(model_large, args):
     coeff_model_path = args.pretrained_ligo_path
     dict_model_coeff = torch.load(os.path.join(coeff_model_path, 'pytorch_model.bin'), map_location=torch.device('cpu'))
     model_coeff = model_large.__class__(config=model_large.config, args=args)
-    model_coeff = general_bert_grow(model_coeff, args)
+    model_coeff = create_ligo_from_model(model_coeff, args)
     model_coeff.load_state_dict(dict_model_coeff)
 
     modules_coeff = {name:module for name, module in model_coeff.named_modules()}
